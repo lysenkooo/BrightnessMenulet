@@ -22,7 +22,7 @@ Allows you to control monitor brigthness via menu in status bar.
 ## Download
 
 Download app build:
-[Brightness Menulet.app](/releases/latest).
+[Brightness Menulet.app](http://github.com/florianbeck/brightnessmenulet/releases/download/1.5/Brightness.Menulet.app.zip).
 
 ## Monitors
 
