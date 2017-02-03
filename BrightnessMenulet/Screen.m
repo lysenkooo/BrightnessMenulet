@@ -56,10 +56,10 @@ __x > __high ? __high : (__x < __low ? __low : __x);\
 }
 
 - (void)refreshValues {
-    struct DDCReadResponse cBrightness = [controls readDisplay:self.screenNumber controlValue:BRIGHTNESS];
-    struct DDCReadResponse cContrast   = [controls readDisplay:self.screenNumber controlValue:CONTRAST];
+    struct DDCReadCommand cBrightness = [controls readDisplay:self.screenNumber controlValue:BRIGHTNESS];
+    struct DDCReadCommand cContrast   = [controls readDisplay:self.screenNumber controlValue:CONTRAST];
 
-    if (!cBrightness.valid && !cContrast.valid)
+    if (!cBrightness.success && !cContrast.success)
         return;
 
     self.currentBrightness = cBrightness.current_value;
@@ -76,7 +76,7 @@ __x > __high ? __high : (__x < __low ? __low : __x);\
 
 - (void)ddcReadOut {
     for(int i=0x00; i<=255; i++){
-        struct DDCReadResponse response = [controls readDisplay:self.screenNumber controlValue:i];
+        struct DDCReadCommand response = [controls readDisplay:self.screenNumber controlValue:i];
         NSLog(@"VCP: %x - %d / %d \n", i, response.current_value, response.max_value);
     }
 }
