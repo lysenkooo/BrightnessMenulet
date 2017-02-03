@@ -50,6 +50,7 @@ Download app build:
 * Dell P2412H
 * Dell U2412M 
 * HP Z23i
+* DELL U2717D (partially)
 
 If you have tested your monitor(s) with this tool, please let me know
 whether or not it work and I will update this list.
