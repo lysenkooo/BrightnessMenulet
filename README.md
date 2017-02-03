@@ -72,6 +72,7 @@ If you like this menulet, please use [this link](http://amazon.florianbeck.de) f
 -   [Alec Jacobson](http://www.alecjacobson.com/weblog/) — first version
     of [Brightness Menulet
     app](http://www.alecjacobson.com/weblog/?p=1127)
+-   [wagenet](http://github.com/wagenet) – DDC Update 
 -   Jon Taylor — [DDC/CI
     bindings](https://github.com/jontaylor/DDC-CI-Tools-for-OS-X)
 -   Victor Miroshnikov — copy&paste&debug job
