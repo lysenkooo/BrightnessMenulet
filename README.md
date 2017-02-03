@@ -2,7 +2,7 @@
 
 Allows you to control monitor brigthness via menu in status bar.
 
-**Note:** This tool works on OSX 10.8+. In 10.8+, I2C tools are not able to detect monitor buses for communication. The main API calls for DDC communication is deprecated so this project could be obselete if Apple completely removes CGDisplayIOServicePort. If you have tested your monitor(s) with this tool, please let me know wether it worked or not so I can add monitor models here. Preference's Debug button logs to the console VCP codes and their values on the selected monitor.
+**Note:** This tool works on OSX 10.8+. In 10.8+, I2C tools are not able to detect monitor buses for communication. If you have tested your monitor(s) with this tool, please let me know wether it worked or not so I can add monitor models here. Preference's Debug button logs to the console VCP codes and their values on the selected monitor.
 
 ---
 
@@ -10,6 +10,7 @@ Allows you to control monitor brigthness via menu in status bar.
 
 -   Following the internal Display's Brightness (if automatic brightness is activated in the system preferences this follows the light sensor as well)
 -   Auto-Follow is indicated by highlighting the status bar icon
+-   Auto-Follow can be calibrated to support displays with different brightness
 -   Multi-Monitor support
 -   Key bindings for Darker, Brighter and toggle the Follow-Main-Screen option
 -   Compatible with OSX 10.8+

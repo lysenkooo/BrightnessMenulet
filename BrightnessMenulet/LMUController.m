@@ -86,9 +86,10 @@
 - (void)updateTimerCallBack {
 
     float value = self.getSystemBrightness;
-    int newPercent = value * 100;
     
     for(Screen* screen in controls.screens) {
+        
+        int newPercent = value * (screen.maxAuto - screen.minAuto) + screen.minAuto;
         
         [self doUpdate:screen:newPercent];
         

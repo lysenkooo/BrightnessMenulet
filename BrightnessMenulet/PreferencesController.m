@@ -29,6 +29,9 @@
 @property (strong) NSArray* contrastOutlets;
 
 // Auto-Brightness IBOutlets
+@property (weak) IBOutlet NSTextField* autoMIN;
+@property (weak) IBOutlet NSTextField* autoMAX;
+
 @property (weak) IBOutlet NSButton *autoBrightOnStartupButton;
 @property (weak) IBOutlet NSButton *autoAttributeBR;
 @property (weak) IBOutlet NSButton *autoAttributeCR;
@@ -96,6 +99,7 @@
     
     [self updateBrightnessControls];
     [self updateContrastControls];
+    [self updateAutoCalibration];
     
     [self updateAutoAttribute];
 
@@ -131,6 +135,11 @@
 - (void)updateAutoAttribute {
     [_autoAttributeBR setState:([_currentScreen.currentAutoAttribute isEqualToString:@"BR"] ? 1 : 0)];
     [_autoAttributeCR setState:([_currentScreen.currentAutoAttribute isEqualToString:@"CR"] ? 1 : 0)];
+}
+
+- (void)updateAutoCalibration {
+    [_autoMIN setIntValue:_currentScreen.minAuto];
+    [_autoMAX setIntValue:_currentScreen.maxAuto];
 }
 
 - (void)refreshScreenPopUpList {
@@ -232,6 +241,14 @@
     
     [_currentScreen setAutoAttribute: sender.title];
 
+}
+
+- (IBAction)didAutoCallibrationMin:(id)sender{
+    [_currentScreen setAutoMin:[sender integerValue]];
+}
+
+- (IBAction)didAutoCallibrationMax:(id)sender{
+    [_currentScreen setAutoMax:[sender integerValue]];
 }
 
 - (IBAction)updateIntOutletValueChanged:(id)sender {

@@ -28,6 +28,8 @@ __x > __high ? __high : (__x < __low ? __low : __x);\
 @property (readwrite) NSInteger maxContrast;
 
 @property (strong, readwrite) NSString* currentAutoAttribute;
+@property (readwrite) NSInteger maxAuto;
+@property (readwrite) NSInteger minAuto;
 
 
 @end
@@ -49,6 +51,18 @@ __x > __high ? __high : (__x < __low ? __low : __x);\
         } else {
             [defaults setObject:@"BR" forKey:[NSString stringWithFormat: @"autoAttribute_%@", self.model]];
             _currentAutoAttribute = @"BR";
+        }
+        if([[[defaults dictionaryRepresentation] allKeys] containsObject:[NSString stringWithFormat: @"autoMin_%@", self.model]]){
+            self.minAuto = [defaults integerForKey:[NSString stringWithFormat: @"autoMin_%@", self.model]];
+        } else {
+            [defaults setInteger:0 forKey:[NSString stringWithFormat: @"autoMin_%@", self.model]];
+            self.minAuto = 0;
+        }
+        if([[[defaults dictionaryRepresentation] allKeys] containsObject:[NSString stringWithFormat: @"autoMax_%@", self.model]]){
+            self.maxAuto = [defaults integerForKey:[NSString stringWithFormat: @"autoMax_%@", self.model]];
+        } else {
+            [defaults setInteger:100 forKey:[NSString stringWithFormat: @"autoMax_%@", self.model]];
+            self.maxAuto = 100;
         }
     }
 
@@ -165,6 +179,25 @@ __x > __high ? __high : (__x < __low ? __low : __x);\
     [defaults setObject:self.currentAutoAttribute forKey:[NSString stringWithFormat: @"autoAttribute_%@", self.model]];
     
 }
+
+- (void)setAutoMin:(NSInteger)value {
+    self.minAuto = value;
+    
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:value forKey:[NSString stringWithFormat: @"autoMin_%@", self.model]];
+    
+}
+- (void)setAutoMax:(NSInteger)value {
+    self.maxAuto = value;
+    
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:value forKey:[NSString stringWithFormat: @"autoMax_%@", self.model]];
+    
+}
+
+
+
+
 
 
 @end

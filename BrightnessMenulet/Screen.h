@@ -25,6 +25,9 @@
 @property (strong) NSMutableArray* contrastOutlets;
 
 @property (strong, readonly) NSString* currentAutoAttribute;
+@property (readonly) NSInteger maxAuto;
+@property (readonly) NSInteger minAuto;
+
 
 
 - (instancetype)initWithModel:(NSString*)model screenID:(CGDirectDisplayID)screenID serial:(NSString*)serial;
@@ -39,5 +42,8 @@
 - (void)setContrast:(NSInteger)contrast byOutlet:(NSView*)outlet;
 
 - (void)setAutoAttribute:(NSString*)attribute;
+- (void)setAutoMin:(NSInteger*)attribute;
+- (void)setAutoMax:(NSInteger*)attribute;
+
 
 @end
