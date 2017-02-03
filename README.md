@@ -14,14 +14,14 @@ Allows you to control monitor brigthness via menu in status bar.
 -   Key bindings for Darker, Brighter and toggle the Follow-Main-Screen option
 -   Compatible with OSX 10.8+
 
-![image](BrightnessMenulet/screenshot.png)
+![image](screenshot.png)
 
-![image](BrightnessMenulet/screenshot2.png)
+![image](screenshot2.png)
 
 ## Download
 
 Download app build:
-[Brightness\_Menulet.zip](BrightnessMenulet/Brightness_Menulet.zip?raw=true).
+[BrightnessMenulet.zip](BrightnessMenulet.zip?raw=true).
 
 ## Monitors
 
