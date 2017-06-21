@@ -33,9 +33,11 @@ If you don't want to build the app yourself, you can download a build version [h
 * Dell U2014h
 * Dell U2414h
 * Dell U2415h
-* Dell U2515H
-* Dell U2715h
+* Dell U2417h
+* Dell U2515h (not via HDMI)
+* Dell U2715h (not via HDMI)
 * Dell U2713HM
+* Dell U3415W
 * Dell P2415Q
 * Dell S2216M
 * Samsung SA350
@@ -53,6 +55,7 @@ If you don't want to build the app yourself, you can download a build version [h
 * Dell U2412M 
 * HP Z23i
 * DELL U2717D (partially)
+* DELL DS2716DG
 
 If you have tested your monitor(s) with this tool, please let me know
 whether or not it work and I will update this list.
