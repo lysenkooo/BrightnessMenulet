@@ -46,6 +46,7 @@ If you don't want to build the app yourself, you can download a build version [h
 * Samsung SMT27A300
 * LG 34UC87M (connection: Thunderbolt)
 * LG 27UD88-W
+* EIZO FlexScan EV2436W (connection: USB-C to DisplayPort)
 
 ###### Non-Working
 
