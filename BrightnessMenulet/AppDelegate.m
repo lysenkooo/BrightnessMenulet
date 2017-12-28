@@ -62,7 +62,10 @@
 - (void)applicationDidChangeScreenParameters:(NSNotification *)notification {
 
     [_mainMenu refreshMenuScreens];
-    
+
+    if ([controls.screens count] > 0 && [[NSUserDefaults standardUserDefaults] boolForKey:@"autoBrightOnStartup"]) {
+        [lmuCon startMonitoring];
+    }
 }
 
 - (void) bindShortcuts {
